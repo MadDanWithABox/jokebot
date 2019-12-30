@@ -20,6 +20,10 @@ RUN python get-pip.py
 #RUN pip install rasa-x==$RASA_X_VERSION --extra-index-url https://pypi.rasa.com/simple
 RUN if [ "$RASA_X_VERSION" != "stable" ] ; then pip install rasa-x=="$RASA_X_VERSION" --extra-index-url https://pypi.rasa.com/simple ; else pip install rasa-x --extra-index-url https://pypi.rasa.com/simple ; fi
 
+RUN pip list | grep sanic
+RUN pip install --upgrade sanic~=19.9.0
+RUN pip list | grep sanic
+
 VOLUME ["/app"]
 WORKDIR /app
 
