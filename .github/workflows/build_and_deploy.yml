@@ -16,10 +16,15 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+    - name: Show python versions again
+      run: |
+        python --version
+        python3 --version
     - name: Install dependencies
+      working-directory: ${{ github.workspace }}/actions
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
+        pip install -r requirements.txt
     - name: Code Formatting Tests
       working-directory: ${{ github.workspace }}
       run: |
