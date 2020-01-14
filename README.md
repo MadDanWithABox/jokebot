@@ -54,6 +54,7 @@ After training the model, run the command:
 ```sh
 docker-compose run rasa-x rasa test nlu -u test/test_data.md --model models/$(ls models)
 docker-compose run rasa-x rasa test core --stories test/test_stories.md
+rasa test --stories test/test_stories.md --e2e
 ```
 
 # Rasa Interactive Shell
@@ -119,3 +120,4 @@ The project includes the following scripts:
 - Creed quotes - I know exactly what he's talking about, I sprout mung beans on a damp paper towel in my desk drawer, very nutritious but they smell like death
 
 https://www.theodysseyonline.com/best-creed-bratton-quotes-the-office
+

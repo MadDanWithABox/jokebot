@@ -1,18 +1,18 @@
-## inspiring_quote filled
-* quote{"quote_type":"inspiring"}
-  - slot{"quote_type":"inspiring"}
-  - action_inspiring_quote
-
 ## corny_joke
-* joke
+* joke: tell me a joke
   - utter_ask_joke_type
-* joke{"joke_type":"corny"}
+* joke: [corny](joke_type)
   - slot{"joke_type":"corny"}
-  - action_corny_joke
+  - action_corny
 
 ## inspiring_quote
-* quote
+* quote: can i have a quote
   - utter_ask_quote_type
-* quote{"quote_type":"inspiring"}
+* quote: [trump](quote_type) quote
+  - slot{"quote_type":"trump"}
+  - action_trump
+
+## inspiring_quote filled
+* quote: give me an [inspiring](quote_type) quote
   - slot{"quote_type":"inspiring"}
-  - action_inspiring_quote
+  - action_inspiring
